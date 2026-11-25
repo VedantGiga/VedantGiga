@@ -1,31 +1,294 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" fill="none">
   <defs>
-    <radialGradient id="bg" cx="0" cy="0" r="1" gradientTransform="translate(600 220) rotate(90) scale(320 750)" gradientUnits="userSpaceOnUse"><stop stop-color="#171717"/><stop offset="1" stop-color="#050505"/></radialGradient>
-    <linearGradient id="faceA" x1="430" y1="95" x2="600" y2="265" gradientUnits="userSpaceOnUse"><stop stop-color="#F4F4F4"/><stop offset="1" stop-color="#737373"/></linearGradient>
-    <linearGradient id="faceB" x1="600" y1="95" x2="770" y2="270" gradientUnits="userSpaceOnUse"><stop stop-color="#8E8E8E"/><stop offset="1" stop-color="#2D2D2D"/></linearGradient>
-    <linearGradient id="faceC" x1="470" y1="250" x2="740" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#626262"/><stop offset="1" stop-color="#1A1A1A"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <!-- Deep obsidian retro-futuristic sky -->
+    <linearGradient id="skyGrad" x1="600" y1="0" x2="600" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#05050A"/>
+      <stop offset="55%" stop-color="#0B091A"/>
+      <stop offset="100%" stop-color="#1A0B2E"/>
+    </linearGradient>
+
+    <!-- Floor void -->
+    <linearGradient id="floorGrad" x1="600" y1="300" x2="600" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#140826"/>
+      <stop offset="35%" stop-color="#080612"/>
+      <stop offset="100%" stop-color="#040408"/>
+    </linearGradient>
+
+    <!-- Retro sun gradient -->
+    <linearGradient id="sunGrad" x1="600" y1="70" x2="600" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="40%" stop-color="#FF7B29"/>
+      <stop offset="80%" stop-color="#FF2E93"/>
+      <stop offset="100%" stop-color="#9D174D"/>
+    </linearGradient>
+
+    <!-- Horizon glow -->
+    <radialGradient id="horizonGlow" cx="50%" cy="62%" r="55%">
+      <stop offset="0%" stop-color="#FF2E93" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#7C3AED" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#05050A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Cyan core glow -->
+    <radialGradient id="cyanAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#00F0FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 3D Cube faces -->
+    <linearGradient id="cubeTop" x1="0" y1="-90" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="0" y1="0" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#090818"/>
+    </linearGradient>
+    <linearGradient id="cubeLeft" x1="-80" y1="0" x2="0" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#0F0D24"/>
+    </linearGradient>
+
+    <!-- Chrome text gradient -->
+    <linearGradient id="chromeText" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#E2E8F0"/>
+      <stop offset="52%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="neonCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="neonPink" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Sun horizontal slice mask -->
+    <mask id="sunSlices">
+      <rect x="0" y="0" width="1200" height="480" fill="white"/>
+      <rect x="420" y="198" width="360" height="4" fill="black"/>
+      <rect x="420" y="214" width="360" height="6" fill="black"/>
+      <rect x="420" y="232" width="360" height="8" fill="black"/>
+      <rect x="420" y="252" width="360" height="10" fill="black"/>
+      <rect x="420" y="274" width="360" height="13" fill="black"/>
+      <rect x="420" y="299" width="360" height="40" fill="black"/>
+    </mask>
+
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.5" fill="#000000" fill-opacity="0.18"/>
+    </pattern>
+
+    <!-- Clip outer rounded card -->
+    <clipPath id="cardClip">
+      <rect width="1200" height="480" rx="18"/>
+    </clipPath>
   </defs>
-  <rect width="1200" height="430" rx="18" fill="url(#bg)"/>
-  <g opacity=".23" fill="#D7D7D7">
-    <circle cx="95" cy="100" r="2"/><circle cx="140" cy="190" r="2"/><circle cx="230" cy="75" r="1.5"/><circle cx="1000" cy="110" r="2"/><circle cx="1090" cy="270" r="1.5"/><circle cx="950" cy="350" r="2"/><circle cx="300" cy="330" r="2"/><circle cx="840" cy="70" r="1.5"/>
-  </g>
-  <g stroke="#747474" stroke-width="1" opacity=".35"><path d="M160 215L385 160L500 205M710 190L880 145L1030 225M280 285L450 330L600 315L760 350" stroke-dasharray="4 7"/></g>
-  <g fill="#AFAFAF" opacity=".65"><circle cx="160" cy="215" r="4"/><circle cx="385" cy="160" r="4"/><circle cx="880" cy="145" r="4"/><circle cx="1030" cy="225" r="4"/><circle cx="280" cy="285" r="4"/><circle cx="760" cy="350" r="4"/></g>
-  <g transform="translate(600 205)">
-    <ellipse rx="190" ry="110" fill="#B5B5B5" opacity=".08" filter="url(#glow)"/>
-    <g>
-      <path d="M0 -112L126 -38L0 34L-126 -38Z" fill="url(#faceA)" stroke="#E9E9E9" stroke-opacity=".35"/>
-      <path d="M126 -38L126 108L0 181L0 34Z" fill="url(#faceB)" stroke="#CFCFCF" stroke-opacity=".25"/>
-      <path d="M0 34L0 181L-126 108L-126 -38Z" fill="url(#faceC)" stroke="#BDBDBD" stroke-opacity=".25"/>
-      <path d="M0 -112L0 34L-126 -38Z" fill="#BEBEBE" opacity=".25"/>
-      <path d="M0 -112L126 -38L0 34Z" fill="#FFFFFF" opacity=".16"/>
+
+  <style>
+    .float-core {
+      animation: floatY 5.5s ease-in-out infinite;
+    }
+    .pulse-ring {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulseScale 4s ease-in-out infinite;
+    }
+    .star-a { animation: twinkle 3.2s ease-in-out infinite; }
+    .star-b { animation: twinkle 4.7s ease-in-out infinite 1.1s; }
+    .star-c { animation: twinkle 2.8s ease-in-out infinite 0.6s; }
+    .blink-dot { animation: blink 1.6s steps(2, start) infinite; }
+    .dash-flow {
+      stroke-dasharray: 10 8;
+      animation: dashMove 2.4s linear infinite;
+    }
+    @keyframes floatY {
+      0%, 100% { transform: translate(600px, 195px) translateY(0px); }
+      50% { transform: translate(600px, 195px) translateY(-12px); }
+    }
+    @keyframes pulseScale {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 0.95; transform: scale(1.06); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 0.95; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+    @keyframes dashMove {
+      to { stroke-dashoffset: -36; }
+    }
+  </style>
+
+  <g clip-path="url(#cardClip)">
+    <!-- Sky & Horizon -->
+    <rect width="1200" height="300" fill="url(#skyGrad)"/>
+    <rect width="1200" height="480" fill="url(#horizonGlow)"/>
+
+    <!-- Starfield -->
+    <g fill="#E2E8F0">
+      <circle class="star-a" cx="92" cy="54" r="1.4"/>
+      <circle class="star-b" cx="178" cy="112" r="1.8" fill="#00F0FF"/>
+      <circle class="star-c" cx="255" cy="48" r="1.2"/>
+      <circle class="star-a" cx="340" cy="135" r="1.5"/>
+      <circle class="star-b" cx="415" cy="64" r="1.3" fill="#FFB84D"/>
+      <circle class="star-c" cx="785" cy="58" r="1.5"/>
+      <circle class="star-a" cx="860" cy="128" r="1.7" fill="#00F0FF"/>
+      <circle class="star-b" cx="945" cy="72" r="1.2"/>
+      <circle class="star-c" cx="1038" cy="144" r="1.6" fill="#FF2E93"/>
+      <circle class="star-a" cx="1118" cy="62" r="1.4"/>
+      <circle class="star-b" cx="132" cy="210" r="1.2"/>
+      <circle class="star-c" cx="1074" cy="222" r="1.3"/>
     </g>
-    <g stroke="#F5F5F5" stroke-opacity=".4" stroke-width="1.2" fill="none"><path d="M-126 -38L0 34L126 -38M0 -112L0 34M0 34L0 181"/></g>
-    <circle r="3" fill="#F5F5F5"/>
+
+    <!-- Retro-Futuristic Synthwave Sun -->
+    <circle cx="600" cy="205" r="126" fill="url(#sunGrad)" mask="url(#sunSlices)" filter="url(#neonPink)" opacity="0.9"/>
+
+    <!-- Horizon Floor -->
+    <rect x="0" y="300" width="1200" height="180" fill="url(#floorGrad)"/>
+
+    <!-- 3D Perspective Grid: Radial Rays -->
+    <g stroke="#FF2E93" stroke-opacity="0.38" stroke-width="1">
+      <line x1="600" y1="300" x2="-150" y2="480"/>
+      <line x1="600" y1="300" x2="40" y2="480"/>
+      <line x1="600" y1="300" x2="200" y2="480"/>
+      <line x1="600" y1="300" x2="340" y2="480"/>
+      <line x1="600" y1="300" x2="470" y2="480"/>
+      <line x1="600" y1="300" x2="600" y2="480"/>
+      <line x1="600" y1="300" x2="730" y2="480"/>
+      <line x1="600" y1="300" x2="860" y2="480"/>
+      <line x1="600" y1="300" x2="1000" y2="480"/>
+      <line x1="600" y1="300" x2="1160" y2="480"/>
+      <line x1="600" y1="300" x2="1350" y2="480"/>
+    </g>
+
+    <!-- 3D Perspective Grid: Animated Scrolling Horizontal Lines -->
+    <g stroke="#00F0FF" stroke-opacity="0.42" stroke-width="1">
+      <line x1="0" y1="306" x2="1200" y2="306">
+        <animate attributeName="y1" values="302;318" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="302;318" dur="1.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="318" x2="1200" y2="318">
+        <animate attributeName="y1" values="318;342" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="318;342" dur="1.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="342" x2="1200" y2="342">
+        <animate attributeName="y1" values="342;378" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="342;378" dur="1.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="378" x2="1200" y2="378">
+        <animate attributeName="y1" values="378;426" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="378;426" dur="1.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="426" x2="1200" y2="426">
+        <animate attributeName="y1" values="426;484" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="426;484" dur="1.4s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Horizon Neon Line -->
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#00F0FF" stroke-width="2" filter="url(#neonCyan)" opacity="0.85"/>
+
+    <!-- Centerpiece 3D Floating Isometric Monolith + Orbital Rings -->
+    <g class="float-core">
+      <ellipse cx="0" cy="10" rx="150" ry="150" fill="url(#cyanAura)"/>
+
+      <!-- Outer Tilted 3D Gyroscope Rings -->
+      <g>
+        <ellipse cx="0" cy="0" rx="135" ry="44" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.7" transform="rotate(-18)"/>
+        <ellipse cx="0" cy="0" rx="135" ry="44" stroke="#FF2E93" stroke-width="1.2" stroke-opacity="0.65" stroke-dasharray="14 8" transform="rotate(24)">
+          <animateTransform attributeName="transform" type="rotate" from="24 0 0" to="384 0 0" dur="16s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+
+      <!-- Isometric 3D Cube -->
+      <g filter="url(#neonCyan)">
+        <!-- Top face -->
+        <polygon points="0,-78 68,-39 0,0 -68,-39" fill="url(#cubeTop)" fill-opacity="0.85" stroke="#E0F2FE" stroke-width="1.4"/>
+        <!-- Left face -->
+        <polygon points="-68,-39 0,0 0,78 -68,39" fill="url(#cubeLeft)" stroke="#00F0FF" stroke-width="1.3"/>
+        <!-- Right face -->
+        <polygon points="68,-39 0,0 0,78 68,39" fill="url(#cubeRight)" stroke="#FF2E93" stroke-width="1.3"/>
+        <!-- Inner glowing wireframe core -->
+        <polygon class="pulse-ring" points="0,-42 36,-21 0,0 -36,-21" fill="none" stroke="#FFFFFF" stroke-width="1.2"/>
+        <line x1="0" y1="0" x2="0" y2="78" stroke="#00F0FF" stroke-width="1.5"/>
+      </g>
+
+      <!-- Orbiting 3D Satellite Nodes -->
+      <circle cx="0" cy="0" r="4.5" fill="#FFB84D" filter="url(#neonPink)">
+        <animateMotion dur="5s" repeatCount="indefinite" path="M -130,0 A 130,42 0 1,0 130,0 A 130,42 0 1,0 -130,0"/>
+      </circle>
+      <circle cx="0" cy="0" r="3.5" fill="#00F0FF" filter="url(#neonCyan)">
+        <animateMotion dur="7s" repeatCount="indefinite" path="M 130,0 A 130,42 0 1,1 -130,0 A 130,42 0 1,1 130,0"/>
+      </circle>
+    </g>
+
+    <!-- Left HUD Telemetry Block -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+      <text x="48" y="54" font-size="11" fill="#00F0FF" letter-spacing="3">SYS // 01 · VEDANT.OS</text>
+      <circle class="blink-dot" cx="53" cy="76" r="4" fill="#22C55E"/>
+      <text x="66" y="80" font-size="11" fill="#94A3B8" letter-spacing="2">ONLINE · BHOPAL, IN</text>
+
+      <!-- Animated Equalizer Bars -->
+      <g fill="#FFB84D" opacity="0.85">
+        <rect x="48" y="102" width="4" height="14" rx="1">
+          <animate attributeName="height" values="6;18;8;14" dur="1.1s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="110;98;108;102" dur="1.1s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="56" y="96" width="4" height="20" rx="1">
+          <animate attributeName="height" values="18;7;20;10" dur="0.9s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="98;109;96;106" dur="0.9s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="64" y="104" width="4" height="12" rx="1">
+          <animate attributeName="height" values="10;16;6;14" dur="1.3s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="106;100;110;102" dur="1.3s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="72" y="100" width="4" height="16" rx="1">
+          <animate attributeName="height" values="16;8;18;6" dur="1.0s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="100;108;98;110" dur="1.0s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <!-- Right HUD Telemetry Block -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" text-anchor="end">
+      <text x="1152" y="54" font-size="11" fill="#FF2E93" letter-spacing="3">MODE // FOUNDER_BUILD</text>
+      <text x="1152" y="78" font-size="11" fill="#94A3B8" letter-spacing="2">FULL-STACK · MOBILE · AI</text>
+      <line class="dash-flow" x1="970" y1="96" x2="1152" y2="96" stroke="#00F0FF" stroke-width="1.2" opacity="0.7"/>
+    </g>
+
+    <!-- Center-Bottom Hero Typography -->
+    <g text-anchor="middle">
+      <text x="600" y="392" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" font-weight="800" fill="url(#chromeText)" letter-spacing="10" filter="url(#neonCyan)">VEDANT VYAS</text>
+      <text x="600" y="426" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" fill="#FFB84D" letter-spacing="4.5">SOFTWARE DEVELOPER · FOUNDER · PRODUCT BUILDER</text>
+      <text x="600" y="454" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#94A3B8" letter-spacing="2">TURNING IDEAS INTO USEFUL SOFTWARE &amp; COMMUNITIES THAT BUILD</text>
+    </g>
+
+    <!-- HUD Corner Brackets -->
+    <g stroke="#00F0FF" stroke-width="2" stroke-opacity="0.75" fill="none">
+      <path d="M 22 48 L 22 22 L 48 22"/>
+      <path d="M 1152 22 L 1178 22 L 1178 48"/>
+      <path d="M 22 432 L 22 458 L 48 458"/>
+      <path d="M 1152 458 L 1178 458 L 1178 432"/>
+    </g>
+
+    <!-- Subtle CRT Scanline Overlay -->
+    <rect width="1200" height="480" fill="url(#scanlines)" pointer-events="none"/>
+    <!-- Outer Border -->
+    <rect x="0.75" y="0.75" width="1198.5" height="478.5" rx="17.5" stroke="#00F0FF" stroke-opacity="0.28" stroke-width="1.5"/>
   </g>
-  <g stroke="#D8D8D8" stroke-width="1.2" fill="none" opacity=".55"><path d="M350 200C405 125 485 110 530 125"/><path d="M670 285C730 310 805 290 850 250"/><path d="M440 325C490 355 535 360 570 350"/></g>
-  <g fill="#DADADA" opacity=".65"><circle cx="350" cy="200" r="3"/><circle cx="530" cy="125" r="3"/><circle cx="670" cy="285" r="3"/><circle cx="850" cy="250" r="3"/><circle cx="440" cy="325" r="3"/><circle cx="570" cy="350" r="3"/></g>
-  <text x="40" y="42" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#9A9A9A" letter-spacing="3">VEDANT VYAS / DEVELOPER &amp; FOUNDER</text>
-  <text x="1160" y="395" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#777" letter-spacing="2">BUILDING AT THE INTERSECTION OF CODE &amp; IDEAS</text>
 </svg>

@@ -1,156 +1,143 @@
 <!--
-  VEDANT VYAS · GitHub profile README
-  Replace any link or username placeholders before publishing.
+  VEDANT VYAS · Retro-Futuristic 3D Animated GitHub Profile README
+  100% GitHub-native: all motion graphics run inside animated SVG assets.
 -->
 <div align="center">
-  <img src="./github_readme_assets/hero.svg" alt="Minimal monochrome 3D developer visual" width="100%" />
+  <a href="https://vedantsrealm.vercel.app/">
+    <img src="./github_readme_assets/hero.svg" alt="Vedant Vyas — Retro-Futuristic 3D Hero" width="100%" />
+  </a>
 </div>
 
+<br/>
 
 <div align="center">
-  <h1>Vedant Vyas</h1>
-  <p><strong>Software Developer · Founder · Product Builder</strong></p>
-  <p>Turning ideas into useful software, thoughtful experiences, and communities that build.</p>
-  <p>
-    <a href="https://vedantsrealm.vercel.app/">Portfolio</a> ·
-    <a href="https://vintvate.tech">Vintvate</a> ·
-    <a href="https://stackhouse.social/">Stackhouse</a>
-  </p>
+  <a href="https://vedantsrealm.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-VEDANTSREALM-05050A?style=for-the-badge&labelColor=00F0FF&color=0B091A" alt="Portfolio" /></a>
+  <a href="https://vintvate.tech"><img src="https://img.shields.io/badge/STUDIO-VINTVATE-05050A?style=for-the-badge&labelColor=FF2E93&color=0B091A" alt="Vintvate" /></a>
+  <a href="https://stackhouse.social/"><img src="https://img.shields.io/badge/COMMUNITY-STACKHOUSE-05050A?style=for-the-badge&labelColor=FFB84D&color=0B091A" alt="Stackhouse" /></a>
 </div>
-
 
 <div align="center">
-  <img src="https://img.shields.io/badge/BASED_IN-BHOPAL%2C_INDIA-222222?style=flat-square&labelColor=000000" />
-  <img src="https://img.shields.io/badge/FOCUS-FULL_STACK%20%26%20PRODUCT-222222?style=flat-square&labelColor=000000" />
-  <img src="https://img.shields.io/badge/CURRENTLY-BUILDING-222222?style=flat-square&labelColor=000000" />
+  <img src="https://img.shields.io/badge/BASED_IN-BHOPAL%2C_INDIA-0B091A?style=flat-square&labelColor=05050A&color=00F0FF" alt="Based in Bhopal, India" />
+  <img src="https://img.shields.io/badge/FOCUS-FULL_STACK_%26_PRODUCT-0B091A?style=flat-square&labelColor=05050A&color=FF2E93" alt="Focus: Full-Stack and Product" />
+  <img src="https://img.shields.io/badge/STATUS-BUILDING_IN_PUBLIC-0B091A?style=flat-square&labelColor=05050A&color=FFB84D" alt="Status: Building" />
 </div>
 
+---
 
-## A little about my journey
+## `// 01` · About
 
-I'm a developer who likes moving beyond the screen where an idea starts. I work across frontend, backend, mobile, integrations, and product thinking—then bring those pieces together into software people can actually use.
+I'm a developer who likes moving beyond the screen where an idea starts. I work across **frontend, backend, mobile, integrations, and product thinking**—bringing those pieces together into software people can actually use.
 
+I care about the details: **interaction design, motion, performance, clean architecture**, and the small decisions that make a digital product feel intentional. Alongside engineering, I'm building ventures and bringing builders together around technology.
 
-I enjoy the details: interaction design, motion, performance, clean architecture, and the small decisions that make a digital product feel considered. Alongside development, I'm building ventures and bringing people together around technology.
+---
 
+## `// 02` · Evolution in Chapters
 
-## The work, in chapters
+<div align="center">
+  <img src="./github_readme_assets/chapters_hud.svg" alt="Animated Evolution Timeline HUD" width="100%" />
+</div>
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>01 — Learning by shipping</h3>
+<h3><code>01</code> — Learning by shipping</h3>
 <p>Started with the web, kept building, and moved from experiments and internships into real product work—learning by shipping, debugging, collaborating, and taking ownership.</p>
 </td>
 <td width="50%" valign="top">
-<h3>02 — Product engineering</h3>
+<h3><code>02</code> — Product engineering</h3>
 <p>Expanded into full-stack development, React Native, backend services, payments, authentication, and the architecture behind product experiences.</p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<h3>03 — Building in public</h3>
+<h3><code>03</code> — Building in public</h3>
 <p>Started building communities and side projects, turning technical interests into products, meetups, partnerships, and experiments.</p>
 </td>
 <td width="50%" valign="top">
-<h3>04 — Founder mode</h3>
-<p>Building Vintvate while continuing to work on products, explore ideas, collaborate with builders, and get closer to the business side of software.</p>
+<h3><code>04</code> — Founder mode</h3>
+<p>Building <strong>Vintvate</strong> while continuing to work on products, explore ideas, collaborate with builders, and get closer to the business side of software.</p>
 </td>
 </tr>
 </table>
 
+---
 
-## Where I've worked
+## `// 03` · Where I've Worked
 
-| Team | Role | What I got to work on |
+| Team | Role | Focus |
 |---|---|---|
-| **Cikka** | Software Developer · Current | Product development with React Native and modern app engineering |
-| **Devnovate** | Frontend Developer | Frontend development and web experiences |
-| **Creomind Innovations** | Full-stack Intern | Full-stack development during internship |
-| **Shadow Fox** | Web Development Intern | Web development and hands-on project work |
+| **Cikka** | `Software Developer · Current` | Product development with React Native and modern app engineering |
+| **Devnovate** | `Frontend Developer` | Frontend architecture and interactive web experiences |
+| **Creomind Innovations** | `Full-stack Intern` | End-to-end full-stack product development |
+| **Shadow Fox** | `Web Development Intern` | Web development and hands-on shipping |
 
+---
 
-## Things I'm building
+## `// 04` · Things I'm Building
 
 <div align="center">
-  <img src="./github_readme_assets/orbit.svg" width="100%" alt="Animated orbit graphic representing projects and ideas" />
+  <img src="./github_readme_assets/orbit.svg" alt="3D Animated Orbital Venture Matrix" width="100%" />
 </div>
 
+<br/>
 
-### Vintvate — digital studio
-<a href="https://vintvate.tech"><strong>vintvate.tech ↗</strong></a>
+| Venture | Domain | Overview |
+|---|---|---|
+| [**Vintvate ↗**](https://vintvate.tech) | `Digital Studio` | Premium websites, digital products, custom software, mobile apps, SaaS, and AI-powered workflows. |
+| [**Stackhouse ↗**](https://stackhouse.social/) | `Builder Community` | Community for developers, founders, and Web3 builders—meetups, collaborations, and builder rooms. |
+| [**MEOW ↗**](https://meow-lac-chi.vercel.app/) | `Events & RSVP` | Product experiment around event discovery, RSVP flows, organizer profiles, and modern hosting. |
+| [**Pixel Pilgrim ↗**](https://www.pixelpilgrim.tech/) | `Gaming Social` | Social space for gamers to log games, share opinions, and discover what others are playing. |
+| [**AutoBrief AI ↗**](https://daily-team-whisper.onrender.com/) | `Team Intelligence` | AI workspace turning GitHub, Slack, Jira, calendars, and Notion context into standup summaries and insights. |
 
-Building a studio for premium websites, digital products, custom software, mobile apps, SaaS, and AI-powered workflows. The goal: thoughtful design, solid engineering, and software that earns its place.
+---
 
+## `// 05` · Current Focus
 
-### Stackhouse — community for builders
-<a href="https://stackhouse.social/"><strong>stackhouse.social ↗</strong></a>
-
-Growing a community around developers, founders, Web3, and people who want to build. Organizing meetups, collaborations, and opportunities to get builders in the same room.
-
-
-### MEOW — events & community product
-<a href="https://meow-lac-chi.vercel.app/">Project preview ↗</a>
-
-A product experiment around event discovery, RSVP, organizer profiles, and community—shaping a simple, modern experience for hosting things worth showing up to.
-
-
-### Pixel Pilgrim — gaming social
-<a href="https://www.pixelpilgrim.tech/">pixelpilgrim.tech ↗</a>
-
-A social space for gamers to log games, share opinions, discover what others are playing, and connect around gaming culture.
-
-
-### AutoBrief AI — team intelligence
-<a href="https://daily-team-whisper.onrender.com/">Live project ↗</a>
-
-An AI-powered workspace concept that brings team context from tools like GitHub, Slack, Jira, calendars, and Notion into summaries, insights, and standup reports.
-
-
-## My current focus
-
-- Building and shipping product features at **Cikka**
+- Shipping product features at **Cikka**
 - Growing **Vintvate** into a product-minded digital studio
-- Developing **Stackhouse** as a community and builder ecosystem
-- Exploring event-tech and community workflows through **MEOW**
-- Getting better at system design, backend engineering, mobile performance, and product execution
+- Scaling **Stackhouse** as a community and builder ecosystem
+- Refining event-tech and community workflows through **MEOW**
+- Deepening **system design, backend engineering, mobile performance, and product execution**
 
+---
 
-## Tools I work with
+## `// 06` · Tech Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,postgres,supabase,firebase,tailwind,html,css,git,github,figma,androidstudio" alt="Technology stack icons" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,postgres,supabase,firebase,tailwind,html,css,git,github,figma,androidstudio&theme=dark" alt="Technology stack icons" />
 </div>
-
 
 <details>
-<summary><strong>More about my toolkit</strong></summary>
+<summary><strong>Expand full toolkit</strong></summary>
 
 - **Frontend:** React, Next.js, React Native, JavaScript, TypeScript, Tailwind CSS
 - **Backend:** Node.js, Express, REST APIs, MongoDB, PostgreSQL
-- **Platform & services:** Supabase, Firebase, authentication, email, payments, third-party APIs
-- **Motion & experience:** GSAP, Framer Motion, Lenis
+- **Platform & Services:** Supabase, Firebase, authentication, email, payments, third-party APIs
+- **Motion & Experience:** GSAP, Framer Motion, Lenis
 - **Workflow:** Git, GitHub, Figma, Android Studio
+
 </details>
 
+---
 
-## A few principles I keep coming back to
+## `// 07` · Principles
 
 <div align="center">
   <table>
     <tr>
-      <td align="center"><strong>Make it useful.</strong><br/><sub>Purpose before polish.</sub></td>
-      <td align="center"><strong>Make it feel right.</strong><br/><sub>Details are part of the product.</sub></td>
-      <td align="center"><strong>Keep learning.</strong><br/><sub>Ship, reflect, iterate.</sub></td>
+      <td align="center" width="33%"><strong>Make it useful.</strong><br/><sub>Purpose before polish.</sub></td>
+      <td align="center" width="33%"><strong>Make it feel right.</strong><br/><sub>Details are part of the product.</sub></td>
+      <td align="center" width="33%"><strong>Keep learning.</strong><br/><sub>Ship, reflect, iterate.</sub></td>
     </tr>
   </table>
 </div>
 
+---
 
-## Let's connect
+## `// 08` · Connect
 
 I'm always up for collaborating on interesting products, creative engineering, community projects, or ideas that deserve to be built.
-
 
 <div align="center">
   <a href="https://vedantsrealm.vercel.app/">Portfolio</a> ·
@@ -159,8 +146,8 @@ I'm always up for collaborating on interesting products, creative engineering, c
   <a href="https://www.pixelpilgrim.tech/">Pixel Pilgrim</a>
 </div>
 
+<br/>
 
 <div align="center">
-  <br/>
-  <sub>DESIGNED WITH INTENTION. BUILT WITH CURIOSITY. SHIPPED WITH OWNERSHIP.</sub>
+  <img src="./github_readme_assets/footer_wave.svg" alt="Animated Retro-Futuristic Footer Wave" width="100%" />
 </div>

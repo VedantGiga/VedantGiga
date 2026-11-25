@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" fill="none">
+  <defs>
+    <linearGradient id="hudBg" x1="0" y1="0" x2="1200" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07070F"/>
+      <stop offset="50%" stop-color="#0D0A1C"/>
+      <stop offset="100%" stop-color="#07070F"/>
+    </linearGradient>
+    <linearGradient id="beamGrad" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#FF2E93"/>
+      <stop offset="100%" stop-color="#FFB84D"/>
+    </linearGradient>
+    <filter id="glowSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="220" rx="16" fill="url(#hudBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Top HUD Header -->
+  <text x="42" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#00F0FF" letter-spacing="3">EVOLUTION // 01 → 04</text>
+  <text x="1158" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#64748B" letter-spacing="2">CHRONOLOGY.LOG</text>
+
+  <!-- Base Track Line -->
+  <line x1="150" y1="108" x2="1050" y2="108" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Animated Energy Pulse Line -->
+  <line x1="150" y1="108" x2="1050" y2="108" stroke="url(#beamGrad)" stroke-width="2.5" stroke-dasharray="140 760" stroke-linecap="round" filter="url(#glowSoft)">
+    <animate attributeName="stroke-dashoffset" values="900;0" dur="3.6s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Node 01 -->
+  <g transform="translate(160 108)">
+    <circle r="22" fill="#00F0FF" fill-opacity="0.1" stroke="#00F0FF" stroke-opacity="0.35">
+      <animate attributeName="r" values="18;24;18" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <polygon points="0,-11 11,0 0,11 -11,0" fill="#00F0FF" filter="url(#glowSoft)"/>
+    <text y="-34" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" fill="#00F0FF" letter-spacing="2">01</text>
+    <text y="46" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Learning by Shipping</text>
+    <text y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#94A3B8">WEB · INTERNSHIPS · OWNERSHIP</text>
+  </g>
+
+  <!-- Node 02 -->
+  <g transform="translate(453 108)">
+    <circle r="22" fill="#A855F7" fill-opacity="0.1" stroke="#A855F7" stroke-opacity="0.35">
+      <animate attributeName="r" values="18;24;18" dur="3s" begin="0.7s" repeatCount="indefinite"/>
+    </circle>
+    <polygon points="0,-11 11,0 0,11 -11,0" fill="#A855F7" filter="url(#glowSoft)"/>
+    <text y="-34" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" fill="#C084FC" letter-spacing="2">02</text>
+    <text y="46" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Product Engineering</text>
+    <text y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#94A3B8">FULL-STACK · REACT NATIVE · APIS</text>
+  </g>
+
+  <!-- Node 03 -->
+  <g transform="translate(747 108)">
+    <circle r="22" fill="#FF2E93" fill-opacity="0.1" stroke="#FF2E93" stroke-opacity="0.35">
+      <animate attributeName="r" values="18;24;18" dur="3s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <polygon points="0,-11 11,0 0,11 -11,0" fill="#FF2E93" filter="url(#glowSoft)"/>
+    <text y="-34" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" fill="#FF2E93" letter-spacing="2">03</text>
+    <text y="46" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Building in Public</text>
+    <text y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#94A3B8">COMMUNITIES · MEETUPS · COLLAB</text>
+  </g>
+
+  <!-- Node 04 -->
+  <g transform="translate(1040 108)">
+    <circle r="22" fill="#FFB84D" fill-opacity="0.12" stroke="#FFB84D" stroke-opacity="0.45">
+      <animate attributeName="r" values="18;25;18" dur="2.8s" begin="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <polygon points="0,-11 11,0 0,11 -11,0" fill="#FFB84D" filter="url(#glowSoft)"/>
+    <text y="-34" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" fill="#FFB84D" letter-spacing="2">04</text>
+    <text y="46" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Founder Mode</text>
+    <text y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#94A3B8">VINTVATE · VENTURES · STRATEGY</text>
+  </g>
+</svg>
+
